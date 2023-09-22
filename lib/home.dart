@@ -1,6 +1,8 @@
 import 'package:all_test/items/ziti.dart';
 import 'package:flutter/material.dart';
 
+import 'items/ui1/ui_1_home.dart';
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -45,9 +47,11 @@ class _HomeState extends State<Home> {
             ]),
             item(
               title: '字体使用--全局和局部',
+              to: ziti(),
             ),
             item(
-              title: '字体使用--全局和局部',
+              to: ui_home(),
+              title: 'ui布局社交系列1',
             )
           ],
         ),
@@ -58,9 +62,11 @@ class _HomeState extends State<Home> {
 
 class item extends StatelessWidget {
   final String title;
+  final Widget to;
   item({
     super.key,
     required this.title,
+    required this.to,
   });
 
   @override
@@ -69,7 +75,7 @@ class item extends StatelessWidget {
       onTap: () {
         Navigator.push(context,
             MaterialPageRoute(builder: (BuildContext context) {
-          return ziti();
+          return to;
         }));
       },
       child: Container(
