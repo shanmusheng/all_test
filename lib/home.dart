@@ -1,4 +1,5 @@
 import 'package:all_test/items/ziti.dart';
+import 'package:all_test/testing/tabtest.dart';
 import 'package:flutter/material.dart';
 
 import 'items/ui1/ui_1_home.dart';
@@ -52,6 +53,10 @@ class _HomeState extends State<Home> {
             item(
               to: ui_home(),
               title: 'ui布局社交系列1',
+            ),
+            item(
+              to: CustomPageViewWidget(),
+              title: 'pageview启动页实例',
             )
           ],
         ),

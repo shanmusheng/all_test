@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../login.dart';
-
 class continues extends StatelessWidget {
   final double width;
   final String text;
